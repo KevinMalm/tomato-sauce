@@ -1,0 +1,10 @@
+flask
+dacite
+pyyaml
+lancedb
+ollama
+langchain
+result
+# -- For Building the Demo
+metaflow
+beautifulsoup4

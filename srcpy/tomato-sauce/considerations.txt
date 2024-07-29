@@ -1,0 +1,8 @@
+When context querying the Book Content:
+    Need to filter to chapter-index so future event's aren't seen as past events
+
+
+Memory Access (Entities):
+- Load: Load from DB / Files and into Memory
+- Get: Read from Memory
+- Update: Write to DB / Files and Memory 

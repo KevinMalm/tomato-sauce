@@ -1,0 +1,15 @@
+from lancedb.pydantic import LanceModel
+
+
+class ChapterOverviewTable(LanceModel):
+    id: str
+    title: str
+    summary: str
+    index: int
+
+
+class ChapterXrefTable(LanceModel):
+    chapter: str  # Chapter ID
+    tag: str  # Character / Location
+    key: str  # Key to other Entity
+    name: str  # Common Name for easy LU

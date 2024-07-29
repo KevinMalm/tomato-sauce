@@ -1,3 +1,9 @@
+config/demo/*
+.ignore/*
+srcpy/tomato-sauce/bin/*
+srcpy/tomato-sauce/include/*
+srcpy/tomato-sauce/lib/*
+srcpy/tomato-sauce/share/*
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

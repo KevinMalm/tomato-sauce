@@ -1,0 +1,179 @@
+character/descriptions, 34fbd9f2-6e31-4521-8455-775c0a24acf3, Victor Frankenstein is the doomed protagonist and narrator of the story
+character/descriptions, 34fbd9f2-6e31-4521-8455-775c0a24acf3, Victor Frankenstein is an adult
+character/descriptions, 34fbd9f2-6e31-4521-8455-775c0a24acf3, Victor Frankenstein Studied in Ingolstadt
+character/descriptions, 34fbd9f2-6e31-4521-8455-775c0a24acf3, Victor discovers the secret of life and creates an intelligent but grotesque monster
+character/relation, 34fbd9f2-6e31-4521-8455-775c0a24acf3, Victor Frankenstein is the creator of the Monster
+character/relation, 34fbd9f2-6e31-4521-8455-775c0a24acf3, Victor Frankenstein is Henry Clerval`s childhood friendVictor Frankenstein is the son of Alphonse FrankensteinVictor Frankenstein is the older brother of William Frankenstein
+character/descriptions, f4792d5e-38c3-41c7-840e-415860a5d8eb, The Monster is 8 feet tall and hideously ugly
+character/descriptions, f4792d5e-38c3-41c7-840e-415860a5d8eb, The Monster is highly intelligent, eloquent, and sensitive.
+character/descriptions, f4792d5e-38c3-41c7-840e-415860a5d8eb, The Monster is an outcast and shunned by society.
+character/descriptions, f4792d5e-38c3-41c7-840e-415860a5d8eb, The Monster`s feeling of abandonment compels him to seek revenge against his creator.
+character/relation, f4792d5e-38c3-41c7-840e-415860a5d8eb, The Monster was created by Victor Frankenstein
+character/descriptions, 75774c43-7fde-4717-ac8c-c855fc99ef40, Elizabeth Lavenza is an orphan
+character/descriptions, 75774c43-7fde-4717-ac8c-c855fc99ef40, Elizabeth Lavenza is four to five years younger than Victor
+character/descriptions, 75774c43-7fde-4717-ac8c-c855fc99ef40, Elizabeth is from a destitute peasant cottage in Italy
+character/relation, 75774c43-7fde-4717-ac8c-c855fc99ef40, Elizabeth Lavenza is Victor Frankenstein`s cousin
+character/descriptions, b5cbdaeb-b17a-4b30-a2f9-e5c7102c44f0, Henry Clerval saved Victor Frankenstein`s life
+character/descriptions, b5cbdaeb-b17a-4b30-a2f9-e5c7102c44f0, Henry Clerval is a scientist
+character/descriptions, b5cbdaeb-b17a-4b30-a2f9-e5c7102c44f0, Henry Clerval is a cheerful man
+character/relation, b5cbdaeb-b17a-4b30-a2f9-e5c7102c44f0, Henry Clerval`s is Victor Frankenstein childhood friend
+character/descriptions, d055b722-1433-4dc5-b087-2d6208ee8623, Alphonse Frankenstein is very sympathetic toward his son Victor
+character/descriptions, d055b722-1433-4dc5-b087-2d6208ee8623, Alphonse Frankenstein prioritizes family
+character/relation, d055b722-1433-4dc5-b087-2d6208ee8623, Alphonse Frankenstein is Victor`s father
+character/descriptions, e45c0a19-adbb-4183-95e5-50dd8866069f, William Frankenstein is the favorite of the Frankenstein family
+character/relation, e45c0a19-adbb-4183-95e5-50dd8866069f, William Frankenstein is Victor Frankenstein`s youngest brother
+location/descriptions, e1a6601e-423d-44dd-a9db-7557314bfe97, Frankenstein` Castle is dark and only lit by the glow of a torch in the far east corner
+location/descriptions, e1a6601e-423d-44dd-a9db-7557314bfe97, The Lab is inside an old decaying castle, its stone bricks echo every sound
+location/relation, e1a6601e-423d-44dd-a9db-7557314bfe97, Frankenstein`s Castle is east of the city
+location/relation, e1a6601e-423d-44dd-a9db-7557314bfe97, Frankenstein`s Castle is near only a short walk away from snail lake
+location/descriptions, 5dc27782-814f-4ea9-9f01-460becb2d008, Snail Lake is a pleasant lake that is widely shard by the town.
+location/descriptions, 5dc27782-814f-4ea9-9f01-460becb2d008, Snail Lake is a great place to go fishing
+location/relation, 5dc27782-814f-4ea9-9f01-460becb2d008, Snail Lake is a 20 minute walk from town square
+location/relation, 5dc27782-814f-4ea9-9f01-460becb2d008, From Snail Lake, Frankenstein`s castle can be seen
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, To Mrs. Saville, England. St. Petersburgh, Dec. 11th, 17—. You will rejoice to hear that no disaster
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, has accompanied the commencement of an enterprise which you have regarded with such evil
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, forebodings. I arrived here yesterday, and my first task is to assure my dear sister of my welfare
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, and increasing confidence in the success of my undertaking. I am already far north of London, and
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, as I walk in the streets of Petersburgh, I feel a cold northern breeze play upon my cheeks, which
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, braces my nerves and fills me with delight. Do you understand this feeling? This breeze, which has
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, travelled from the regions towards which I am advancing, gives me a foretaste of those icy climes.
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, Inspirited by this wind of promise, my daydreams become more fervent and vivid. I try in vain to be
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, persuaded that the pole is the seat of frost and desolation; it ever presents itself to my
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, imagination as the region of beauty and delight. There, Margaret, the sun is for ever visible, its
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, broad disk just skirting the horizon and diffusing a perpetual splendour. There—for with your
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, leave, my sister, I will put some trust in preceding navigators—there snow and frost are banished;
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, and, sailing over a calm sea, we may be wafted to a land surpassing in wonders and in beauty every
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, region hitherto discovered on the habitable globe. Its productions and features may be without
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, example, as the phenomena of the heavenly bodies undoubtedly are in those undiscovered solitudes.
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, What may not be expected in a country of eternal light? I may there discover the wondrous power
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, which attracts the needle and may regulate a thousand celestial observations that require only this
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, voyage to render their seeming eccentricities consistent for ever. I shall satiate my ardent
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, curiosity with the sight of a part of the world never before visited, and may tread a land never
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, before imprinted by the foot of man. These are my enticements, and they are sufficient to conquer
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, all fear of danger or death and to induce me to commence this laborious voyage with the joy a child
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, feels when he embarks in a little boat, with his holiday mates, on an expedition of discovery up
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, his native river. But supposing all these conjectures to be false, you cannot contest the
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, inestimable benefit which I shall confer on all mankind, to the last generation, by discovering a
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, passage near the pole to those countries, to reach which at present so many months are requisite;
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, or by ascertaining the secret of the magnet, which, if at all possible, can only be effected by an
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, undertaking such as mine. These reflections have dispelled the agitation with which I began my
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, letter, and I feel my heart glow with an enthusiasm which elevates me to heaven, for nothing
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, contributes so much to tranquillise the mind as a steady purpose—a point on which the soul may fix
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, its intellectual eye. This expedition has been the favourite dream of my early years. I have read
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, with ardour the accounts of the various voyages which have been made in the prospect of arriving at
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, the North Pacific Ocean through the seas which surround the pole. You may remember that a history
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, of all the voyages made for purposes of discovery composed the whole of our good Uncle Thomas’
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, library. My education was neglected, yet I was passionately fond of reading. These volumes were my
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, study day and night, and my familiarity with them increased that regret which I had felt, as a
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, child, on learning that my father’s dying injunction had forbidden my uncle to allow me to embark
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, in a seafaring life. These visions faded when I perused, for the first time, those poets whose
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, effusions entranced my soul and lifted it to heaven. I also became a poet and for one year lived in
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, a paradise of my own creation; I imagined that I also might obtain a niche in the temple where the
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, names of Homer and Shakespeare are consecrated. You are well acquainted with my failure and how
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, heavily I bore the disappointment. But just at that time I inherited the fortune of my cousin, and
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, my thoughts were turned into the channel of their earlier bent. Six years have passed since I
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, resolved on my present undertaking. I can, even now, remember the hour from which I dedicated
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, myself to this great enterprise. I commenced by inuring my body to hardship. I accompanied the
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, whale-fishers on several expeditions to the North Sea; I voluntarily endured cold, famine, thirst,
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, and want of sleep; I often worked harder than the common sailors during the day and devoted my
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, nights to the study of mathematics, the theory of medicine, and those branches of physical science
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, from which a naval adventurer might derive the greatest practical advantage. Twice I actually hired
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, myself as an under-mate in a Greenland whaler, and acquitted myself to admiration. I must own I
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, felt a little proud when my captain offered me the second dignity in the vessel and entreated me to
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, remain with the greatest earnestness, so valuable did he consider my services. And now, dear
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, Margaret, do I not deserve to accomplish some great purpose? My life might have been passed in ease
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, and luxury, but I preferred glory to every enticement that wealth placed in my path. Oh, that some
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, encouraging voice would answer in the affirmative! My courage and my resolution is firm; but my
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, hopes fluctuate, and my spirits are often depressed. I am about to proceed on a long and difficult
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, voyage, the emergencies of which will demand all my fortitude: I am required not only to raise the
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, spirits of others, but sometimes to sustain my own, when theirs are failing. This is the most
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, favourable period for travelling in Russia. They fly quickly over the snow in their sledges; the
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, motion is pleasant, and, in my opinion, far more agreeable than that of an English stagecoach. The
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, cold is not excessive, if you are wrapped in furs—a dress which I have already adopted, for there
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, is a great difference between walking the deck and remaining seated motionless for hours, when no
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, exercise prevents the blood from actually freezing in your veins. I have no ambition to lose my
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, life on the post-road between St. Petersburgh and Archangel. I shall depart for the latter town in
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, a fortnight or three weeks; and my intention is to hire a ship there, which can easily be done by
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, paying the insurance for the owner, and to engage as many sailors as I think necessary among those
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, who are accustomed to the whale-fishing. I do not intend to sail until the month of June; and when
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, shall I return? Ah, dear sister, how can I answer this question? If I succeed, many, many months,
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, perhaps years, will pass before you and I may meet. If I fail, you will see me again soon, or
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, never. Farewell, my dear, excellent Margaret. Heaven shower down blessings on you, and save me,
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, that I may again and again testify my gratitude for all your love and kindness. Your affectionate
+chapter/content, c862e62c-e219-440a-a3dc-0b30cef5b946, brother, R. Walton
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, To Mrs. Saville, England. Archangel, 28th March, 17—. How slowly the time passes here, encompassed
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, as I am by frost and snow! Yet a second step is taken towards my enterprise. I have hired a vessel
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, and am occupied in collecting my sailors; those whom I have already engaged appear to be men on
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, whom I can depend and are certainly possessed of dauntless courage. But I have one want which I
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, have never yet been able to satisfy, and the absence of the object of which I now feel as a most
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, severe evil, I have no friend, Margaret: when I am glowing with the enthusiasm of success, there
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, will be none to participate my joy; if I am assailed by disappointment, no one will endeavour to
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, sustain me in dejection. I shall commit my thoughts to paper, it is true; but that is a poor medium
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, for the communication of feeling. I desire the company of a man who could sympathise with me, whose
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, eyes would reply to mine. You may deem me romantic, my dear sister, but I bitterly feel the want of
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, a friend. I have no one near me, gentle yet courageous, possessed of a cultivated as well as of a
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, capacious mind, whose tastes are like my own, to approve or amend my plans. How would such a friend
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, repair the faults of your poor brother! I am too ardent in execution and too impatient of
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, difficulties. But it is a still greater evil to me that I am self-educated: for the first fourteen
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, years of my life I ran wild on a common and read nothing but our Uncle Thomas’ books of voyages. At
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, that age I became acquainted with the celebrated poets of our own country; but it was only when it
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, had ceased to be in my power to derive its most important benefits from such a conviction that I
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, perceived the necessity of becoming acquainted with more languages than that of my native country.
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, Now I am twenty-eight and am in reality more illiterate than many schoolboys of fifteen. It is true
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, that I have thought more and that my daydreams are more extended and magnificent, but they want (as
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, the painters call it) keeping; and I greatly need a friend who would have sense enough not to
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, despise me as romantic, and affection enough for me to endeavour to regulate my mind. Well, these
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, are useless complaints; I shall certainly find no friend on the wide ocean, nor even here in
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, Archangel, among merchants and seamen. Yet some feelings, unallied to the dross of human nature,
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, beat even in these rugged bosoms. My lieutenant, for instance, is a man of wonderful courage and
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, enterprise; he is madly desirous of glory, or rather, to word my phrase more characteristically, of
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, advancement in his profession. He is an Englishman, and in the midst of national and professional
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, prejudices, unsoftened by cultivation, retains some of the noblest endowments of humanity. I first
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, became acquainted with him on board a whale vessel; finding that he was unemployed in this city, I
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, easily engaged him to assist in my enterprise. The master is a person of an excellent disposition
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, and is remarkable in the ship for his gentleness and the mildness of his discipline. This
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, circumstance, added to his well-known integrity and dauntless courage, made me very desirous to
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, engage him. A youth passed in solitude, my best years spent under your gentle and feminine
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, fosterage, has so refined the groundwork of my character that I cannot overcome an intense distaste
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, to the usual brutality exercised on board ship: I have never believed it to be necessary, and when
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, I heard of a mariner equally noted for his kindliness of heart and the respect and obedience paid
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, to him by his crew, I felt myself peculiarly fortunate in being able to secure his services. I
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, heard of him first in rather a romantic manner, from a lady who owes to him the happiness of her
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, life. This, briefly, is his story. Some years ago he loved a young Russian lady of moderate
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, fortune, and having amassed a considerable sum in prize-money, the father of the girl consented to
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, the match. He saw his mistress once before the destined ceremony; but she was bathed in tears, and
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, throwing herself at his feet, entreated him to spare her, confessing at the same time that she
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, loved another, but that he was poor, and that her father would never consent to the union. My
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, generous friend reassured the suppliant, and on being informed of the name of her lover, instantly
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, abandoned his pursuit. He had already bought a farm with his money, on which he had designed to
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, pass the remainder of his life; but he bestowed the whole on his rival, together with the remains
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, of his prize-money to purchase stock, and then himself solicited the young woman’s father to
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, consent to her marriage with her lover. But the old man decidedly refused, thinking himself bound
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, in honour to my friend, who, when he found the father inexorable, quitted his country, nor returned
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, until he heard that his former mistress was married according to her inclinations. “What a noble
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, fellow!” you will exclaim. He is so; but then he is wholly uneducated: he is as silent as a Turk,
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, and a kind of ignorant carelessness attends him, which, while it renders his conduct the more
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, astonishing, detracts from the interest and sympathy which otherwise he would command. Yet do not
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, suppose, because I complain a little or because I can conceive a consolation for my toils which I
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, may never know, that I am wavering in my resolutions. Those are as fixed as fate, and my voyage is
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, only now delayed until the weather shall permit my embarkation. The winter has been dreadfully
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, severe, but the spring promises well, and it is considered as a remarkably early season, so that
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, perhaps I may sail sooner than I expected. I shall do nothing rashly: you know me sufficiently to
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, confide in my prudence and considerateness whenever the safety of others is committed to my care. I
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, cannot describe to you my sensations on the near prospect of my undertaking. It is impossible to
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, communicate to you a conception of the trembling sensation, half pleasurable and half fearful, with
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, which I am preparing to depart. I am going to unexplored regions, to “the land of mist and snow,”
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, but I shall kill no albatross; therefore do not be alarmed for my safety or if I should come back
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, to you as worn and woeful as the “Ancient Mariner.” You will smile at my allusion, but I will
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, disclose a secret. I have often attributed my attachment to, my passionate enthusiasm for, the
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, dangerous mysteries of ocean to that production of the most imaginative of modern poets. There is
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, something at work in my soul which I do not understand. I am practically industrious—painstaking, a
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, workman to execute with perseverance and labour—but besides this there is a love for the
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, marvellous, a belief in the marvellous, intertwined in all my projects, which hurries me out of the
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, common pathways of men, even to the wild sea and unvisited regions I am about to explore. But to
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, return to dearer considerations. Shall I meet you again, after having traversed immense seas, and
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, returned by the most southern cape of Africa or America? I dare not expect such success, yet I
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, cannot bear to look on the reverse of the picture. Continue for the present to write to me by every
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, opportunity: I may receive your letters on some occasions when I need them most to support my
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, spirits. I love you very tenderly. Remember me with affection, should you never hear from me again.
+chapter/content, e93a7b0b-0330-462a-bed6-f9ec9d78d819, Your affectionate brother, Robert Walton

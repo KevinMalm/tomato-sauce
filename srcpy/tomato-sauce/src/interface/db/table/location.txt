@@ -1,0 +1,8 @@
+from lancedb.pydantic import LanceModel
+
+
+class LocationTable(LanceModel):
+    id: str
+    name: str
+    summary: str
+    index: int
