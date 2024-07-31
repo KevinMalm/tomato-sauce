@@ -1,0 +1,9 @@
+<div class="header">
+
+</div>
+
+@for(app of this.apps; track app.name) {
+<tomato-icon-button [label]="app.name" [callback]="this.navigate" [callback_args]="[this, app.url]"
+    [active]="this.check_active(app.url) && this.app_ref.sidebar_open" icon_path="assets/app-icon/{{app.icon}}.svg">
+</tomato-icon-button>
+}

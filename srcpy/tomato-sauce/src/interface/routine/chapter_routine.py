@@ -41,12 +41,12 @@ class ChapterRoutine:
 
     def _add_content(self, chapter: Chapter):
         d_tbl = self.database.table(VectorTable.DUMPING_GROUND)
-        d_tbl.add(
-            [
-                chapter.into_dumping_attribute(c)
-                for c in self.database.content_linearization.call(chapter.content)
-            ]
-        )
+        chunks = [
+            chapter.into_dumping_attribute(c)
+            for c in self.database.content_linearization.call(chapter.content)
+        ]
+        debug(f"{chapter.metadata.title} broken down into {len(chunks)} chunks...")
+        d_tbl.add(chunks)
 
     def _add(self, chapter: Chapter):
         self._add_content(chapter)

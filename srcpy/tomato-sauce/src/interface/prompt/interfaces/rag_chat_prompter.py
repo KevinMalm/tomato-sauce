@@ -11,7 +11,7 @@ class RagChatPromptInterface(PromptInterface):
     def inject(self, content: ChatConversation) -> ChatConversation:
         _context = content.chats[-1].content
         self.context = RagChatPromptInterface.PriorContext(
-            _context, self.interface.lookup(_context, limit=1000)
+            _context, self.interface.lookup(_context, limit=10)
         )
         prompt = self.template.format(
             content="\n- ".join([l.content for l in self.context.lookups])

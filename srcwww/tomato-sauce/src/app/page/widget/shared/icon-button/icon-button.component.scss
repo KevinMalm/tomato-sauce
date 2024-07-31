@@ -1,0 +1,57 @@
+.wrapper {
+    $padding: 10px;
+    $margin: 15px;
+
+    min-height: calc(var(--side-bar-min-width) - 2 * $padding);
+    min-width: calc(var(--side-bar-min-width) - 2 * $padding);
+
+    height: calc(var(--side-bar-min-width) - 2 * $padding);
+    width: calc(var(--side-bar-min-width) - 2 * $padding);
+
+    margin: $margin auto;
+}
+
+.icon {
+    height: 100%;
+    width: 100%;
+
+
+    .active {
+        background-color: var(--color-blue-primary);
+    }
+
+    .standard {
+        background-color: var(--color-grey-blue-dark);
+    }
+
+    button {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        transition: all .4s;
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    button:hover {
+        border-radius: 5px;
+        transform: translateY(-10px);
+        box-shadow: 0 7px 0 -2px var(--color-red-primary),
+            0 15px 0 -4px var(--color-blue-primary),
+            0 16px 10px -3px var(--color-blue-primary);
+    }
+
+    button:active {
+        transition: all 0.2s;
+        transform: translateY(-5px);
+        box-shadow: 0 2px 0 -2px var(--color-red-primary),
+            0 8px 0 -4px var(--color-blue-primary),
+            0 12px 10px -3px var(--color-blue-primary);
+    }
+}

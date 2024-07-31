@@ -20,6 +20,7 @@ class TomatoSettings:
 
         interface_option: String
         model: String
+        embedding_model: String
 
     @dataclass
     class GlobalSettings:

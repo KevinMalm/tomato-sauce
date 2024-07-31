@@ -38,7 +38,8 @@ class OllamaInterface(LargeLangueModelInterface):
         if self._embedding_function is None:
             fn = get_registry().get("ollama")
             self._embedding_function = fn.create(
-                name=self.settings.global_immutable.model.string,
+                name=self.settings.global_immutable.embedding_model.string,
+                # name="nomic-embed-text",  # self.settings.global_immutable.model.string,
                 host=self.settings.ollama.host.string,
             )
             self._embedding_function.model_fields["host"].default = (

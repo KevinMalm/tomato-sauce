@@ -19,8 +19,12 @@ You are a helpful Co-Author helping write a book.
         ),
         PromptTag.StandardChatPrompt: PromptRepositoryBuilder(
             """
-You are a helpful Co-Author helping write a book. 
+You are a helpful Co-Author helping write a book.
+Answer all questions ONLY off the provided context. If you are unsure of the answer, respond with "I am unsure" instead of making up a response.
+Think carefully before answering and put any thoughts in a <scratchpad> block.
+<context>:
 - {content}
+<context>
 """,
             Interfaces.RagChatPromptInterface,
         ),

@@ -4,6 +4,7 @@ from result import Ok, Err, Result
 from structure.story.book import Book
 from structure.story import DumpKeys, Entity
 from structure.error import InternalConsistencyCheckException
+from .register_llm_routine import get_embedding_function
 from ..llm import LargeLangueModelInterface
 from ..db import VectorDatabaseInterface
 from ..db.constants import VectorTable
@@ -58,6 +59,7 @@ class EntityRoutine:
         d_tbl.delete(_statement)
 
     def _add(self, entity: Entity):
+        _embedding = get_embedding_function()
         # Dumping Ground
         d_tbl = self.database.table(VectorTable.DUMPING_GROUND)
         d_tbl.add([c for c in entity.as_dumping_attributes(self.get_tag_group())])

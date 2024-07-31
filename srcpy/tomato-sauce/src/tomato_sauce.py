@@ -6,10 +6,11 @@ from shared.logging import init_logging, logging
 
 def main():
     def load_demo():
+        import os
         from interface import TomatoInterface
 
         with open(
-            "../../config/demo/sample/frankenstein_demo/frankenstein_demo.tomato",
+            os.environ["TOMATO_FILE"],
             "rb",
         ) as f:
             TomatoInterface.open(f)

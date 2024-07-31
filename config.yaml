@@ -1,0 +1,32 @@
+file_name:
+  string: my_demo
+path:
+  string: ../../config/demo/sample
+settings:
+  bedrock:
+    api_key:
+      string: ''
+    host:
+      string: ''
+  global_immutable:
+    interface_option:
+      string: Ollama
+    model:
+      string: llama2-uncensored
+  global_mutable:
+    linearization:
+      string: Standard Linearization
+    temperature:
+      number: 0.9
+    top_k:
+      number: 20
+    top_p:
+      number: 100
+  ollama:
+    host:
+      string: http://127.0.0.1:11434
+  open_ai:
+    api_key:
+      string: ''
+    host:
+      string: ''
