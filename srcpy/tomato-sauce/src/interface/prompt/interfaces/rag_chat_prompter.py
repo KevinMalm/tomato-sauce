@@ -9,7 +9,11 @@ class RagChatPromptInterface(PromptInterface):
         super().__init__(template, interface)
 
     def inject(self, content: ChatConversation) -> ChatConversation:
-        _context = content.chats[-1].content
+        _context = (
+            content.chats[-1].content
+            if len(content.chats[-1].content) > 0
+            else content.chats[-2].content
+        )
         self.context = RagChatPromptInterface.PriorContext(
             _context, self.interface.lookup(_context, limit=10)
         )

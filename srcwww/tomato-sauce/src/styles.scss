@@ -30,11 +30,13 @@ $tomato-sauce-theme: mat.define-light-theme((color: (primary: $tomato-sauce-prim
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include mat.all-component-themes($tomato-sauce-theme);
+@import 'quill/dist/quill.snow.css';
+@import "@ng-select/ng-select/themes/default.theme.css";
 
 /* You can add global styles to this file, and also import other style files */
 
 :root {
-  --header-height: 50px;
+  --header-height: 60px;
   --side-bar-min-width: 50px;
   --side-bar-max-width: 40vw;
 

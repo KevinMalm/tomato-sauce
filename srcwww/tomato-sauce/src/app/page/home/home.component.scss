@@ -1,0 +1,39 @@
+:host {
+    height: 100%;
+}
+
+.header {
+    height: var(--header-height);
+    display: flex;
+
+    tomato-icon-button {
+        margin: auto var(--content-padding);
+    }
+}
+
+.content {
+    display: flex;
+    height: calc(100% - var(--header-height));
+}
+
+
+app-icon-button {
+    margin: auto 0px auto 5px;
+}
+
+
+ng-select {
+    width: calc(100% - 2 * var(--content-padding));
+    margin: auto var(--content-padding);
+    max-width: var(--content-max-width);
+}
+
+
+::ng-deep .ng-select .ng-clear-wrapper {
+    visibility: hidden;
+}
+
+::ng-deep .ng-select.ng-select-focused:not(.ng-select-opened)>.ng-select-container {
+    transition: 0.4s all;
+    border-color: var(--color-blue-primary);
+}

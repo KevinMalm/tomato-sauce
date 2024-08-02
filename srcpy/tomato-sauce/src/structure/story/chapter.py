@@ -18,7 +18,7 @@ class Chapter(TomatoModel):
         involved_characters: List[Entity]
         involved_locations: List[Entity]
 
-    content: String
+    content: dict
     metadata: Metadata
 
     @staticmethod
@@ -32,7 +32,7 @@ class Chapter(TomatoModel):
                 involved_characters=[],
                 involved_locations=[],
             ),
-            content=String(""),
+            content={},
         )
 
     def sanitize(self):

@@ -1,1 +1,40 @@
-<p>brainstorm works!</p>
+<div class="header">
+    <tomato-icon-button icon_path="assets/shared/trash.svg" [callback]="this.clear" [callback_args]="this"
+        label="Clear">
+
+    </tomato-icon-button>
+
+
+    <div class="spacer"></div>
+
+    <tomato-icon-button icon_path="assets/brain-storm/inject_rag.svg" [callback]="this.toggle_rag"
+        [callback_args]="this" label="Enable RAG" [active]="this.inject_rag">
+
+    </tomato-icon-button>
+</div>
+
+<div [ngClass]="'content'">
+    @for(message of this.chat_interface.conversation.chats; track message; let index = $index) {
+    <button *ngIf="message.role != 'system'" [class]="message.role" (click)="this.toggle_expand(this, index)">
+        {{message.content}}
+    </button>
+    <section *ngIf="message.role == 'assistant'" class="collapsible"
+        [@collapse]="this.reference_index == null || index != this.expanded_index">
+        @for(reference of this.chat_interface.list_references(this.reference_index!); track reference) {
+        <p [matTooltip]="'Distance: ' + reference.distance.toFixed(4).toString()">
+            {{reference.content}}
+        </p>
+        }
+    </section>
+    }
+</div>
+
+<div class="response-section">
+
+    <textarea class="input" cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1"
+        cdkAutosizeMaxRows="24" [(ngModel)]="prompt"></textarea>
+
+    <tomato-icon-button icon_path="assets/shared/send.svg" [callback]="this.submit_prompt" [callback_args]="this">
+    </tomato-icon-button>
+
+</div>

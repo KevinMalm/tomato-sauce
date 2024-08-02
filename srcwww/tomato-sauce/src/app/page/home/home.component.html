@@ -1,1 +1,65 @@
-<p>home works!</p>
+<div class="header">
+    <button (click)="this.toggle()">Toggle</button>
+    <tomato-icon-button icon_path="assets/shared/save.svg" [callback]="this.save"
+        [callback_args]="this"></tomato-icon-button>
+
+    <div *ngIf="this.story_service.chapter_metadata.loading">
+        Loading...
+    </div>
+
+    <div *ngIf="this.story_service.chapter_metadata.is_errored">
+        ERROR
+        {{this.story_service.chapter_metadata.error}}
+    </div>
+    <div *ngIf="this.story_service.chapter_metadata.is_loaded">
+
+    </div>
+</div>
+<as-split class="content" direction="horizontal" useTransition="true" [disabled]="this.full_screen">
+    <as-split-area [size]="full_screen ? 100 : 50">
+        <div *ngIf="this.story_service.chapter_metadata.is_loaded">
+
+            <div class="editor-bar">
+                <ng-select [(ngModel)]="this.primary_active_id" (change)="this.update_primary()">
+                    @for(chapter of this.story_service.chapter_metadata.data?.entities; track chapter.id; let index =
+                    $index) {
+                    <ng-option [value]="chapter.id.string">{{chapter.title.string}}</ng-option>
+                    }
+                </ng-select>
+            </div>
+
+
+            <app-text-editor *ngIf="this.primary_chapter != null"
+                [content]="this.primary_chapter.content"></app-text-editor>
+
+
+        </div>
+
+
+
+    </as-split-area>
+    <as-split-area [size]="this.full_screen ? 0 : 50">
+
+        <div *ngIf="this.story_service.chapter_metadata.is_loaded">
+            <ng-select [(ngModel)]="this.secondary_active_id" (change)="this.update_secondary()">
+                @for(chapter of this.story_service.chapter_metadata.data?.entities; track chapter.id; let index =
+                $index) {
+                <ng-option [value]="chapter.id.string">{{chapter.title.string}}</ng-option>
+                }
+            </ng-select>
+
+            <app-text-editor *ngIf="this.secondary_chapter != null"
+                [content]="this.secondary_chapter.content"></app-text-editor>
+
+        </div>
+    </as-split-area>
+</as-split>
+
+<!--
+
+        <app-text-editor *ngIf="this.active_index != null"
+        [content]=""></app-text-editor>
+            <tomato-dropdown-selector [labels]="this.chapter_names" [callback]="this.update_a_chapter"
+                [reference]="this" [active]="this.chapter_names[this.active_index]">
+            </tomato-dropdown-selector>
+-->

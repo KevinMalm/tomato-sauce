@@ -17,6 +17,7 @@ def register_callbacks():
     from .callbacks.chapter import list_chapter_metadata_route
     from .callbacks.chat import llm_chat
     from .callbacks.rag import llm_references
+    from .callbacks.thinking import thinking_check
 
     info("Done Registering all Callbacks")
     return

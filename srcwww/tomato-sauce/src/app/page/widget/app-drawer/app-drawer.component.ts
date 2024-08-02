@@ -64,7 +64,7 @@ export class AppDrawerComponent {
     let url: string = data[1];
 
     if (me.check_active(url)) {
-      me.trigger_callback(me.app_ref, me.app_ref.sidebar_open);
+      me.trigger_callback(me.app_ref, !me.app_ref.sidebar_open);
     } else {
       me.router.navigate([url]);
       me.trigger_callback(me.app_ref, true);

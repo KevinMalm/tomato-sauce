@@ -9,8 +9,8 @@ class StandardLinearization(ContentLinearization):
 
     def setup(self):
         self._splitter = RecursiveCharacterTextSplitter(
-            chunk_size=100,
-            chunk_overlap=0,
+            chunk_size=700,
+            chunk_overlap=100,
             length_function=len,
             is_separator_regex=False,
         )

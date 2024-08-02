@@ -1,0 +1,12 @@
+<div class="dropdown">
+
+    <button class="header">
+        {{active}}
+    </button>
+
+    <div class="dropdown-content">
+        @for(label of this.labels; track label; let index = $index) {
+        <button class="dropdown-option" (click)="this.callback(this.reference, index)">{{label}}</button>
+        }
+    </div>
+</div>

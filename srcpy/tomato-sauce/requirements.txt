@@ -5,6 +5,8 @@ lancedb
 ollama
 langchain
 result
+flask_socketio
+# flask-sock
 # -- For Building the Demo
 metaflow
 beautifulsoup4

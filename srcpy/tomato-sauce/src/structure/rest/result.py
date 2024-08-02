@@ -16,12 +16,20 @@ class RestResult:
         header: str
         message: str
 
+    @dataclass
+    class Empty:
+        ok = True
+
     body: dataclass
     code: int
 
     @staticmethod
     def ok(body: dataclass):
         return to_json(RestResult(body, ResultCode.OK))
+
+    @staticmethod
+    def empty_ok():
+        return to_json(RestResult(RestResult.Empty(), ResultCode.OK))
 
     @staticmethod
     def prompt_error(header: str, message: str):

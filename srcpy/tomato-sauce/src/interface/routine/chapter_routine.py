@@ -87,7 +87,14 @@ class ChapterRoutine:
         id: String = String(id)
         if id not in self.book.chapters_by_key:
             return Err(f"Failed to find Chapter with ID {id}")
-        return Ok(self.book.chapters_by_key[id].content.string)
+        return Ok(self.book.chapters_by_key[id].content)
+
+    def set_content(self, id: str, content: dict) -> Result[bool, str]:
+        id: String = String(id)
+        if id not in self.book.chapters_by_key:
+            return Err(f"Failed to find Chapter with ID {id}")
+        self.book.chapters_by_key[id].content = content
+        return Ok(True)
 
     def __enter__(self):
         return self

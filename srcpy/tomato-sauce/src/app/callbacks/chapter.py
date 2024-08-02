@@ -10,7 +10,7 @@ from structure.rest import (
     ChapterContent,
     DeleteChapterRequestResponse,
 )
-from ..app import _app
+from ..app import _app, _sock
 from result import Ok, Err
 
 debug("Now registering %s", RouteConstants.LIST_CHAPTER_METADATA)
@@ -28,7 +28,7 @@ def list_chapter_metadata_route():
 debug("Now registering %s", RouteConstants.DELETE_CHAPTER)
 
 
-@_app.route(RouteConstants.CHAPTER_CONTENT, methods=[BackendConstants.POST])
+@_app.route(RouteConstants.DELETE_CHAPTER, methods=[BackendConstants.POST])
 def delete_chapter_route():
     interface: TomatoInterface = get_interface()
     failed_options = []
@@ -75,4 +75,16 @@ def get_chapter_content_route():
                 warn(e)
                 return RestResult.internal_error("get_chapter_content_route(*)", e)
             case Ok(x):
-                return RestResult.ok(ChapterContent(String(id), String(x)))
+                return RestResult.ok(ChapterContent(String(id), x))
+
+
+@_app.route(RouteConstants.CHAPTER_CONTENT, methods=[BackendConstants.POST])
+def set_chapter_content_route():
+    interface: TomatoInterface = get_interface()
+    req: ChapterContent = from_json(ChapterContent, request.data)
+    with interface.chapter() as c:
+        match c.set_content(req.id.string, req.content):
+            case Err(e):
+                return RestResult.prompt_error("Failed to update Chapter Content", e)
+            case Ok(_):
+                return RestResult.empty_ok()

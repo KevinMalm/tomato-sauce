@@ -1,0 +1,135 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+
+    tomato-icon-button {
+        align-self: center;
+        margin: calc(var(--content-padding) / 2);
+    }
+
+    .spacer {
+        width: 100%;
+    }
+
+    .option {
+        margin: auto var(--content-padding);
+        display: flex;
+        height: 100%;
+        align-items: center;
+
+        p {
+            text-wrap: nowrap;
+            margin: var(--content-padding);
+
+        }
+    }
+}
+
+
+img {
+    height: 40px;
+    width: 40px;
+}
+
+.content {
+    height: 100%;
+    flex: 1 1 auto;
+    overflow-y: auto;
+    transition: all .4s;
+
+    button {
+        display: block;
+        border: none;
+        user-select: text;
+        width: calc(100% - 2 * var(--content-padding));
+        margin: var(--content-padding) var(--content-padding) 0px var(--content-padding);
+        padding: var(--content-padding);
+        font-size: small;
+        text-align: left;
+        white-space: pre-line;
+    }
+
+    .assistant {
+        background-color: var(--color-blue-primary);
+        color: white;
+        border-radius: 30px 30px 30px 5px;
+        transition: all .4s;
+
+    }
+
+    .assistant:hover {
+        background-color: var(--color-grey-blue-dark);
+        color: #ffffffA0;
+        transition: all .4s;
+        cursor: pointer;
+    }
+
+    .user {
+        background-color: var(--color-grey-blue);
+        border-radius: 30px 30px 5px 30px;
+
+
+    }
+}
+
+.content.hidden {
+    opacity: 0.2;
+}
+
+.response-section {
+    display: flex;
+    width: 100%;
+    $standard-height: 34px;
+    $padding: 8px;
+
+    font-size: 12px;
+    font-family: 'Courier New', Courier, monospace;
+    $border-width: 2px;
+
+    .input {
+        margin: auto var(--content-padding);
+        border: $border-width solid transparent;
+        min-height: 1em;
+        width: calc(100% - 4 * var(--content-padding) + 2 * $border-width);
+        padding: 0.8em;
+        outline: none;
+        overflow: hidden;
+        font-size: small;
+        background-color: var(--color-grey-blue);
+        border-radius: 10px;
+        transition: border 0.5s, box-shadow 0.5s, background-color 0.5s;
+        resize: none;
+    }
+
+    .input:hover,
+    .input:focus {
+        border: $border-width solid var(--color-blue-primary);
+        box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+        background-color: white;
+    }
+
+    tomato-icon-button {
+        margin-right: var(--content-padding);
+    }
+}
+
+
+section {
+    box-sizing: border-box;
+
+    p {
+        padding: 5px var(--content-padding);
+        font-size: small;
+        transition: all .4s;
+    }
+
+    p:hover {
+        background-color: var(--color-grey-blue);
+    }
+}

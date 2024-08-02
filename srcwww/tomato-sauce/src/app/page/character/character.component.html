@@ -1,1 +1,7 @@
-<p>character works!</p>
+<div *ngIf="this.characters != null">
+
+    @for(character of this.characters; track character.index) {
+    {{character.name.string}}
+    }
+
+</div>

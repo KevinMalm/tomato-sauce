@@ -6,7 +6,7 @@ from shared.types import String
 
 @dataclass
 class ListChapterMetadataResponse:
-    entities: List[Chapter]
+    entities: List[Chapter.Metadata]
 
 
 @dataclass

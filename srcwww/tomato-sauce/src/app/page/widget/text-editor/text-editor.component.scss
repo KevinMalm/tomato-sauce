@@ -1,0 +1,33 @@
+:host {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+quill-editor {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    ::ng-deep .ql-toolbar.ql-snow {
+        border: none;
+        background-color: var(--color-grey-light);
+    }
+
+    ::ng-deep .ql-container.ql-snow {
+        height: 100%;
+        margin: auto;
+        width: 8.5in;
+        // min-height: 11in;
+        // max-width: var(--content-max-width);
+
+        border: none !important;
+        overflow-y: hidden;
+        background-color: white;
+    }
+
+    ::ng-deep.ql-container.ql-snow {
+        overflow-y: scroll;
+    }
+}
