@@ -49,6 +49,7 @@ class TomatoSettings:
 
         host: String
         api_key: String
+        region: String = "us-east-1"
 
     @dataclass
     class OpenAiSettings:

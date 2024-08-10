@@ -3,7 +3,7 @@
         <button [ngClass]="this.active ? 'active' : 'standard'" (click)="this.callback(this.callback_args)">
             <img *ngIf="this.label != null" [src]="icon_path" [matTooltip]="this.label" matTooltipPosition="right">
 
-            <img *ngIf="this.label == null" [src]="icon_path" matTooltipPosition="right">
+            <img *ngIf="this.label == null" [src]="icon_path">
         </button>
     </div>
 </div>

@@ -1,3 +1,17 @@
 .header {
     height: var(--header-height);
+
+    div {
+        height: var(--side-bar-min-width);
+        width: var(--side-bar-min-width);
+        display: flex;
+
+        mat-spinner {
+            margin: auto;
+        }
+
+        p {
+            margin: auto;
+        }
+    }
 }

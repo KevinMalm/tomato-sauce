@@ -4,6 +4,8 @@
     width: 100%;
 }
 
+$toolbar-height: 36px;
+
 quill-editor {
     width: 100%;
     height: 100%;
@@ -12,13 +14,18 @@ quill-editor {
 
     ::ng-deep .ql-toolbar.ql-snow {
         border: none;
+        height: $toolbar-height;
+        display: flex;
+        flex-wrap: nowrap;
         background-color: var(--color-grey-light);
     }
 
     ::ng-deep .ql-container.ql-snow {
         height: 100%;
+        min-height: calc(100vh - 2 * ($toolbar-height + var(--header-height) + var(--home-toolbar-height)));
         margin: auto;
-        width: 8.5in;
+        width: 100%;
+        max-width: 8.5in;
         // min-height: 11in;
         // max-width: var(--content-max-width);
 
@@ -28,6 +35,7 @@ quill-editor {
     }
 
     ::ng-deep.ql-container.ql-snow {
+        max-height: calc(100vh - $toolbar-height - var(--header-height) - var(--home-toolbar-height));
         overflow-y: scroll;
     }
 }

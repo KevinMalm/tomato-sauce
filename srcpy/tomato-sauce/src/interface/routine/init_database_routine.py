@@ -8,6 +8,8 @@ def init_database(interface: VectorDatabaseInterface):
     for table, model in [
         (VectorTable.DUMPING_GROUND, DumpTable),
     ]:
+        interface.table_builders[table] = model
+        continue
         interface.loaded_table[table] = interface.connection.create_table(
             name=table.value, schema=model, exist_ok=True
         )

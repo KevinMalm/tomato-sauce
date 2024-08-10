@@ -16,11 +16,11 @@ def main():
             TomatoInterface.open(f)
         return
 
-    init_logging(level=logging.DEBUG)
+    init_logging(level=logging.WARN)
     initialize_system()
     register_callbacks()
     load_demo()
-    _app.run(host=BackendConstants.HOST, port=BackendConstants.PORT)
+    _app.run(host=BackendConstants.HOST, port=BackendConstants.PORT, debug=False)
 
 
 if __name__ == "__main__":

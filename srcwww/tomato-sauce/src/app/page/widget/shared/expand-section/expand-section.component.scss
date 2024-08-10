@@ -1,0 +1,55 @@
+$border-width: 2px;
+$my-height: 2.5em;
+$img-height: 2em;
+
+.header {
+    display: flex;
+    width: 100%;
+    margin: var(--content-padding);
+
+    div {
+        display: flex;
+
+        img {
+            height: $img-height;
+            width: $img-height;
+            margin: auto;
+        }
+    }
+
+    .title {
+        display: block;
+        max-lines: 1;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+
+
+        margin: auto var(--content-padding);
+        border: $border-width solid transparent;
+        height: calc($my-height + 5px);
+        width: calc(100% - 6 * var(--content-padding));
+        padding-left: calc(0.8em);
+        font-size: medium;
+        outline: none;
+        text-align: left;
+        cursor: pointer;
+        background-color: var(--color-grey-blue);
+        border-radius: 10px;
+        transition: all 0.5s;
+    }
+
+    .title:hover {
+        background-color: var(--color-blue-primary);
+        color: var(--color-grey-light);
+    }
+}
+
+.active,
+.collapsible:hover {
+    background-color: #555;
+}
+
+.content {
+    overflow: hidden;
+}

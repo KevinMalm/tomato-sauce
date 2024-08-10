@@ -1,1 +1,64 @@
-<p>overview works!</p>
+<div class="header">
+    <div class="spacer"></div>
+
+    <tomato-icon-button icon_path="assets/shared/save.svg" [callback]="this.save_book_metadata" [callback_args]="this"
+        label="Save">
+
+    </tomato-icon-button>
+</div>
+
+<div *ngIf="this.story_service.book_metadata.is_loading">
+    LOADING
+</div>
+<div *ngIf="this.story_service.book_metadata.is_errored">
+    ERROR
+</div>
+<div class="body" *ngIf="this.story_service.book_metadata.is_ok">
+    <!-- Book Title -->
+    <tomato-header-input prefix_icon="assets/overview/book.svg" annotation="Title"
+        [value]="this.story_service.book_metadata.data?.title!" placeholder="Title">
+    </tomato-header-input>
+    <!-- Book Author -->
+    <tomato-header-input prefix_icon="assets/overview/author.svg" annotation="Author"
+        [value]="this.story_service.book_metadata.data?.author!" placeholder="Author">
+    </tomato-header-input>
+    <!-- Book Expandable Summary -->
+    <tomato-expand-section [title]="this.book_summary_formatted" prefix_icon="assets/overview/summary.svg"
+        annotation="Summary">
+        <tomato-long-input [value]="this.story_service.book_metadata.data?.summary!" placeholder="Once upon a time...">
+
+        </tomato-long-input>
+    </tomato-expand-section>
+    <!-- Chapter Section -->
+    <div *ngIf="this.story_service.chapter_metadata.is_loading">
+        Loading...
+    </div>
+    <div *ngIf="this.story_service.chapter_metadata.is_errored">
+        ERRORED
+    </div>
+    <tomato-expand-section title="Table of Contents" prefix_icon="assets/overview/chapter-other.svg"
+        annotation="Summary">
+        <div *ngIf="this.story_service.chapter_metadata.is_ok">
+            <div cdkDropList class="chapter-list" (cdkDropListDropped)="drop($event)">
+                @for (chapter of this.story_service.chapter_metadata.data!.entities; track chapter) {
+                <div class="chapter-box" cdkDrag>
+                    <div class="chapter-custom-placeholder" *cdkDragPlaceholder></div>
+                    {{($index + 1).toString() + ') '}} {{chapter.title.string}}
+                </div>
+                }
+                <div class="chapter-box new" cdkDrag>
+                    <div class="chapter-custom-placeholder" *cdkDragPlaceholder></div>
+                    <tomato-short-input [value]="this.chapter_input_name"
+                        [placeholder]="this.new_chapter_prompt"></tomato-short-input>
+                    <tomato-flat-button [callback]="this.add_new_chapter" [callback_args]="this"
+                        [loading]="this.loading_new_chapter"
+                        icon_path="assets/shared/add-dark.svg"></tomato-flat-button>
+                </div>
+            </div>
+        </div>
+
+    </tomato-expand-section>
+
+
+
+</div>

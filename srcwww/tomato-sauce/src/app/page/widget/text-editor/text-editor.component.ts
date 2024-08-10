@@ -24,9 +24,4 @@ export class TextEditorComponent {
   @Input()
   content!: _String;
 
-  test: string = "hello";
-
-  ngOnInit() {
-    console.log(this.content)
-  }
 }

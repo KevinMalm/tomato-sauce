@@ -1,0 +1,13 @@
+<div class="wrapper">
+    <div class="icon">
+        <button [ngClass]="this.active ? 'active' : 'standard'" (click)="this.callback(this.callback_args)">
+            <div *ngIf="this.loading">
+                <mat-spinner diameter="22" appProgressSpinner color="var(--color-blue-primary)"></mat-spinner>
+            </div>
+            <img *ngIf="this.loading == false && this.label != null" [src]="icon_path" [matTooltip]="this.label"
+                matTooltipPosition="right">
+
+            <img *ngIf="this.loading == false &&this.label == null" [src]="icon_path">
+        </button>
+    </div>
+</div>

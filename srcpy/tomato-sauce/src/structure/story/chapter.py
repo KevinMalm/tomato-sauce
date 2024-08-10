@@ -18,7 +18,7 @@ class Chapter(TomatoModel):
         involved_characters: List[Entity]
         involved_locations: List[Entity]
 
-    content: dict
+    content: String
     metadata: Metadata
 
     @staticmethod

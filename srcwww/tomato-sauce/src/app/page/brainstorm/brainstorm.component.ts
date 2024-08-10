@@ -8,6 +8,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { animate, AUTO_STYLE, state, style, transition, trigger } from '@angular/animations';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { FlatButtonComponent } from '../widget/shared/flat-button/flat-button.component';
 
 
 const DEFAULT_DURATION = 300;
@@ -18,6 +19,7 @@ const DEFAULT_DURATION = 300;
   imports: [
     CommonModule,
     IconButtonComponent,
+    FlatButtonComponent,
     FormsModule,
     MatFormFieldModule,
     MatInputModule,

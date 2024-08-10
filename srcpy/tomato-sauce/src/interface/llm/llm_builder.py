@@ -3,6 +3,7 @@ from shared.logging import info
 from structure.error import InternalConsistencyCheckException
 from app import AvailableInterface
 from .implementation.ollama import OllamaInterface
+from .implementation.bedrock import AwsBedrockInterface
 
 
 def init_llm(metadata: TomatoProject.ProjectMetaData):
@@ -13,6 +14,8 @@ def init_llm(metadata: TomatoProject.ProjectMetaData):
     match metadata.settings.global_immutable.interface_option.string:
         case AvailableInterface.Ollama.value:
             return OllamaInterface(metadata.settings)
+        case AvailableInterface.AwsBedrock.value:
+            return AwsBedrockInterface(metadata.settings)
 
     raise InternalConsistencyCheckException(
         "llm_builder",

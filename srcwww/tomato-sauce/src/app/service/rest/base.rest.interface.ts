@@ -2,10 +2,10 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { RestResult, ResultCode } from "../../data/result.data";
 import { firstValueFrom } from "rxjs";
 import { Expansion } from "@angular/compiler";
+import { ROOT_URL } from "../../app.config";
 
 
 export class RootRestService {
-    static ADDRESS: string = 'http://127.0.0.1:5001/';
 
     static BASE_HEADERS: HttpHeaders | {
         [header: string]: string | string[];
@@ -16,7 +16,7 @@ export class RootRestService {
         };
 
     static url(uri: string): string {
-        return RootRestService.ADDRESS + uri;
+        return ROOT_URL + '/' + uri;
     }
 
 

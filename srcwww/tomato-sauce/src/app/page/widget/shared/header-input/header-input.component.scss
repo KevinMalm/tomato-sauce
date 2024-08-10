@@ -1,0 +1,39 @@
+:host {
+    display: flex;
+}
+
+$border-width: 2px;
+$my-height: 2.5em;
+$img-height: 2em;
+
+.input {
+    margin: auto var(--content-padding);
+    border: $border-width solid transparent;
+    height: $my-height;
+    width: 100%;
+    //width: calc(100% - 4 * var(--content-padding) + 2 * $border-width);
+    padding-left: 0.8em;
+    font-size: medium;
+    outline: none;
+    overflow: hidden;
+    background-color: var(--color-grey-blue);
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+div {
+    display: flex;
+
+    img {
+        height: $img-height;
+        width: $img-height;
+        margin: auto;
+    }
+}
+
+.input:hover,
+.input:focus {
+    border: $border-width solid var(--color-blue-primary);
+    box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+    background-color: white;
+}

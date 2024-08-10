@@ -47,18 +47,25 @@ export class HomeComponent {
   }
 
   async setup() {
-    this.is_loading = true;
     this._primary_active_chapter = null;
     this._secondary_active_chapter = null;
-    await this.story_service.get_chapter_metadata()
+    this.update_metadata();
+    this.update_chapter_data();
+  }
+
+  async update_metadata() {
+    await this.story_service.book_sub_service.load_book_metadata();
+  }
+
+  async update_chapter_data() {
+    this.is_loading = true;
+    await this.story_service.chapter_sub_service.get_chapter_metadata();
     this.primary_active_id = this.story_service.chapter_metadata.data?.entities[0].id.string!;
     this.is_loading = false;
     await this.update_primary();
     this.secondary_active_id = this.primary_active_id;
     await this.update_secondary();
   }
-
-
 
 
   async update_primary() {
@@ -70,7 +77,7 @@ export class HomeComponent {
       this._primary_active_chapter = this._secondary_active_chapter;
     }
     else {
-      let response = await this.story_service.get_content_primary(this.primary_active_id);
+      let response = await this.story_service.chapter_sub_service.get_content_primary(this.primary_active_id);
       if (response.is_errored) {
         // TODO:: Error Handling
         console.log(response.error);
@@ -88,7 +95,7 @@ export class HomeComponent {
     if (this.primary_active_id == this.secondary_active_id) {
       this._secondary_active_chapter = this._primary_active_chapter;
     } else {
-      let response = await this.story_service.get_content_primary(this.secondary_active_id);
+      let response = await this.story_service.chapter_sub_service.get_content_primary(this.secondary_active_id);
       if (response.is_errored) {
         // TODO:: Error Handling
         console.log(response.error);
@@ -109,20 +116,20 @@ export class HomeComponent {
     return this._secondary_active_chapter;
   }
 
-  toggle() {
-    this.full_screen = !this.full_screen;
+  toggle(me: HomeComponent) {
+    me.full_screen = !me.full_screen;
   }
 
   async save(me: HomeComponent) {
     if (me._primary_active_chapter != null) {
-      let response = await me.story_service.save_content(me._primary_active_chapter);
+      let response = await me.story_service.chapter_sub_service.save_content(me._primary_active_chapter);
       if (result_is_ok(response) == false) {
         // TODO: Handle error
         console.log(response.body);
       }
     }
     if (me._secondary_active_chapter != null && me.primary_active_id != me.secondary_active_id) {
-      let response = await me.story_service.save_content(me._secondary_active_chapter);
+      let response = await me.story_service.chapter_sub_service.save_content(me._secondary_active_chapter);
       if (result_is_ok(response) == false) {
         // TODO: Handle error
         console.log(response.body);

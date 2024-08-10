@@ -8,7 +8,8 @@
 .header {
     display: flex;
 
-    tomato-icon-button {
+    tomato-icon-button,
+    tomato-flat-button {
         align-self: center;
         margin: calc(var(--content-padding) / 2);
     }
@@ -43,11 +44,10 @@ img {
     overflow-y: auto;
     transition: all .4s;
 
-    button {
+    div {
         display: block;
         border: none;
-        user-select: text;
-        width: calc(100% - 2 * var(--content-padding));
+        width: calc(100% - 4 * var(--content-padding));
         margin: var(--content-padding) var(--content-padding) 0px var(--content-padding);
         padding: var(--content-padding);
         font-size: small;

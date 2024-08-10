@@ -1,41 +1,37 @@
 from flask_socketio import emit, send
 from ..app import _sock
+from ..constants import RouteConstants
+from shared.util import to_json
+from structure.rest import ThinkingState
 
 clients = 0
 
-
-@_sock.route("/thinking")
-def thinking_check(sock):
-    while True:
-        data = sock.receive()
-        sock.send(data)
+_thinking_thread = None
 
 
-# Function that runs when a clients get connected to the server
 @_sock.on("connect")
-def test_connect():
-    global clients
-    clients += 1
-    print("Client connected test")
+def socket_connect():
+    print("Someone connected")
 
 
-# Read data from client
-@_sock.on("new-message")
-def handle_message(message):
-    print("received message" + message)
-    send_data()
+_workers = 0
+_thinking = False
 
 
-# Send data to client
-@_sock.on("new-message-s")
-def send_data():
-    data = 1.23
-    print("sending Data: temp: {0}, hum: {1}".format(data))
-    emit("data-tmp", {"temperature": data})
+def set_thinking_stage(state: bool, message: str = None):
+    global _workers
+    global _thinking
+    # Worst implementation of a semaphore but ok whatevs
 
+    if state:
+        _workers += 1
+    else:
+        _workers -= 1
 
-@_sock.on("disconnect")
-def test_disconnect():
-    global clients
-    clients -= 1
-    print("Client disconnected")
+    if _workers == 0 and _thinking:
+        _thinking = False
+        _sock.emit(RouteConstants.THINKING, to_json(ThinkingState(_thinking, message)))
+    elif _workers > 0 and _thinking is False:
+        _thinking = True
+        _sock.emit(RouteConstants.THINKING, to_json(ThinkingState(_thinking, message)))
+    return

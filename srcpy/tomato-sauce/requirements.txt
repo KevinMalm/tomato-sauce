@@ -3,6 +3,7 @@ dacite
 pyyaml
 lancedb
 ollama
+boto3
 langchain
 result
 flask_socketio

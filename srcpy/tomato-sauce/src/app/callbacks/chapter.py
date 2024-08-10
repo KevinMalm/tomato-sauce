@@ -3,17 +3,19 @@ from shared.logging import debug, warn
 from shared.types import String
 from shared.util import from_json
 from interface import TomatoInterface, get_interface
+from structure.story.chapter import Chapter
 from ..constants import RouteConstants, BackendConstants
 from structure.rest import (
     RestResult,
     ListChapterMetadataResponse,
     ChapterContent,
+    AddChapterRequest,
     DeleteChapterRequestResponse,
 )
 from ..app import _app, _sock
 from result import Ok, Err
 
-debug("Now registering %s", RouteConstants.LIST_CHAPTER_METADATA)
+debug("Now registering %s", RouteConstants.BOOK_METADATA)
 
 
 @_app.route(RouteConstants.LIST_CHAPTER_METADATA, methods=[BackendConstants.GET])
@@ -88,3 +90,17 @@ def set_chapter_content_route():
                 return RestResult.prompt_error("Failed to update Chapter Content", e)
             case Ok(_):
                 return RestResult.empty_ok()
+
+
+@_app.route(RouteConstants.ADD_CHAPTER_METADATA, methods=[BackendConstants.POST])
+def add_chapter_metadata_route():
+    interface: TomatoInterface = get_interface()
+    req: AddChapterRequest = from_json(AddChapterRequest, request.data)
+    with interface.chapter() as c:
+        match c.add(req.into_chapter()):
+            case Err(e):
+                return RestResult.prompt_error("Failed to add new Chapter", e)
+            case Ok(_):
+                return RestResult.ok(
+                    ListChapterMetadataResponse(c.list_all_metadata())
+                )  # single record

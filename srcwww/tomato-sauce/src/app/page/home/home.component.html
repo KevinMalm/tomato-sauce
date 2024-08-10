@@ -1,23 +1,37 @@
 <div class="header">
-    <button (click)="this.toggle()">Toggle</button>
+    <tomato-icon-button [callback]="this.toggle" [callback_args]="this" label="Split-Screen Mode"
+        [active]="!this.full_screen" icon_path="assets/shared/split.svg">
+    </tomato-icon-button>
+
+
+
+    <div class="title" *ngIf="this.story_service.book_metadata.loading">
+        Loading...
+    </div>
+    <div class="title" *ngIf="!this.story_service.book_metadata.loading">
+        {{this.story_service.book_metadata.data?.title?.string}}
+    </div>
+
     <tomato-icon-button icon_path="assets/shared/save.svg" [callback]="this.save"
         [callback_args]="this"></tomato-icon-button>
 
-    <div *ngIf="this.story_service.chapter_metadata.loading">
-        Loading...
-    </div>
-
-    <div *ngIf="this.story_service.chapter_metadata.is_errored">
-        ERROR
-        {{this.story_service.chapter_metadata.error}}
-    </div>
-    <div *ngIf="this.story_service.chapter_metadata.is_loaded">
-
-    </div>
 </div>
 <as-split class="content" direction="horizontal" useTransition="true" [disabled]="this.full_screen">
     <as-split-area [size]="full_screen ? 100 : 50">
-        <div *ngIf="this.story_service.chapter_metadata.is_loaded">
+
+        <div *ngIf="this.story_service.chapter_metadata.is_loading">
+
+            LOADING
+
+        </div>
+
+        <div *ngIf="this.story_service.chapter_metadata.is_errored">
+
+            ERRORED
+
+        </div>
+
+        <div *ngIf="this.story_service.chapter_metadata.is_ok">
 
             <div class="editor-bar">
                 <ng-select [(ngModel)]="this.primary_active_id" (change)="this.update_primary()">
@@ -40,7 +54,7 @@
     </as-split-area>
     <as-split-area [size]="this.full_screen ? 0 : 50">
 
-        <div *ngIf="this.story_service.chapter_metadata.is_loaded">
+        <div *ngIf="this.story_service.chapter_metadata.is_ok">
             <ng-select [(ngModel)]="this.secondary_active_id" (change)="this.update_secondary()">
                 @for(chapter of this.story_service.chapter_metadata.data?.entities; track chapter.id; let index =
                 $index) {
@@ -57,6 +71,15 @@
 
 <!--
 
+    <div *ngIf="this.story_service.chapter_metadata.is_errored">
+        ERROR
+        {{this.story_service.chapter_metadata.error}}
+    </div>
+    <div *ngIf="this.story_service.chapter_metadata.is_ok">
+
+    </div>
+
+    
         <app-text-editor *ngIf="this.active_index != null"
         [content]=""></app-text-editor>
             <tomato-dropdown-selector [labels]="this.chapter_names" [callback]="this.update_a_chapter"

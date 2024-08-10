@@ -1,5 +1,11 @@
 <div class="header">
-
+    <div *ngIf="this.thinking_state.thinking">
+        <mat-spinner [matTooltip]="this.thinking_state.message" diameter="22" appProgressSpinner
+            color="var(--color-blue-primary)"></mat-spinner>
+    </div>
+    <div *ngIf="!this.thinking_state.thinking">
+        <p>LOGO</p>
+    </div>
 </div>
 
 @for(app of this.apps; track app.name) {

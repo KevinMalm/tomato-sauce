@@ -3,12 +3,24 @@ import { AppComponent } from '../../../app.component';
 import { AppData } from '../shared/icon-button/app.data';
 import { Router } from '@angular/router';
 import { IconButtonComponent } from '../shared/icon-button/icon-button.component';
+import { StoryLordService } from '../../../service/story-lord.service';
+import { Subscription } from 'rxjs';
+import { ThinkingState } from '../../../data/thinking.data';
+import { CommonModule } from '@angular/common';
+import { ProgressSpinnerDirective } from '../../../directive/progress-spinner.directive';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-drawer',
   standalone: true,
   imports: [
-    IconButtonComponent
+    CommonModule,
+    IconButtonComponent,
+    MatTooltipModule,
+
+    ProgressSpinnerDirective,
+    MatProgressSpinnerModule
   ],
   templateUrl: './app-drawer.component.html',
   styleUrl: './app-drawer.component.scss'
@@ -50,9 +62,17 @@ export class AppDrawerComponent {
     },
   ]
 
+  public thinking_state: ThinkingState = {
+    thinking: false,
+    message: ''
+  }
+
+  private _thinking_subscription!: Subscription;
+
 
   constructor(
-    private router: Router
+    private router: Router,
+    private story_service: StoryLordService
   ) { }
 
   check_active(url: string) {
@@ -72,4 +92,12 @@ export class AppDrawerComponent {
 
   }
 
+
+  ngOnInit() {
+    this._thinking_subscription = this.story_service.thinking_state.subscribe(state => this.thinking_state = state);
+  }
+
+  ngOnDestroy() {
+    this._thinking_subscription.unsubscribe();
+  }
 }

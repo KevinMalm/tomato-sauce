@@ -1,0 +1,22 @@
+$border-width: 2px;
+
+.input {
+    margin: auto var(--content-padding);
+    border: $border-width solid transparent;
+    height: 2.5em;
+    width: 100%;
+    // width: calc(100% - 4 * var(--content-padding) + 2 * $border-width);
+    padding-left: 0.8em;
+    outline: none;
+    overflow: hidden;
+    background-color: var(--color-grey-blue);
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+.input:hover,
+.input:focus {
+    border: $border-width solid var(--color-blue-primary);
+    box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+    background-color: white;
+}

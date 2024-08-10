@@ -1,4 +1,6 @@
-import os
+from threading import Thread
+import time
+from typing import Callable
 from structure.story.book import Book
 from shared.types import String
 from structure.story import DumpKeys, Chapter
@@ -7,31 +9,32 @@ from ..db import VectorDatabaseInterface
 from ..db.constants import VectorTable
 from shared.logging import debug
 from result import Ok, Err, Result
+from app import set_thinking_stage
 
 
 class ChapterRoutine:
 
     book: Book
-    path: String
     database: VectorDatabaseInterface
     llm: LargeLangueModelInterface
+    save: Callable
 
     def __init__(
         self,
         book: Book,
-        path: String,
         database: VectorDatabaseInterface,
         llm: LargeLangueModelInterface,
+        save: Callable,
     ):
         self.book = book
-        self.path = path
         self.database = database
         self.llm = llm
+        self.save = save
 
-    def _clear_content(self, id: str, chapter: Chapter = None):
+    def _clear_content(self, id: str = None, chapter: Chapter = None):
         chapter = self.book.get_chapter(id) if chapter is None else chapter
         d_tbl = self.database.table(VectorTable.DUMPING_GROUND)
-        _statement = f"{DumpKeys.KEY} = '{id}' AND {DumpKeys.TAG} LIKE '{DumpKeys.CHAPTER_GROUP}/%'"
+        _statement = f"{DumpKeys.KEY} = '{chapter.metadata.id}' AND {DumpKeys.TAG} LIKE '{DumpKeys.CHAPTER_GROUP}/%'"
         debug(f"({VectorTable.DUMPING_GROUND}) Executing DELETE {_statement}")
         d_tbl.delete(_statement)
 
@@ -46,24 +49,33 @@ class ChapterRoutine:
             for c in self.database.content_linearization.call(chapter.content)
         ]
         debug(f"{chapter.metadata.title} broken down into {len(chunks)} chunks...")
-        d_tbl.add(chunks)
+        if len(chunks) > 0:
+            d_tbl.add(chunks)
+        return len(chunks)
 
     def _add(self, chapter: Chapter):
-        self._add_content(chapter)
+        if chapter.content is not None or len(chapter.content) == 0:
+            self._add_content(chapter)
 
-    def add(self, chapter: Chapter):
-        if self.book.insert_chapter(chapter) is False:
-            return False
+    def add(self, chapter: Chapter) -> Result[bool, str]:
+        match self.book.insert_chapter(chapter):
+            case Err(e):
+                return Err(e)
         self._add(chapter)
-        return True
+        return Ok(True)
 
     def update_content(self, chapter: Chapter):
-        """if self.book.update_chapter(chapter) is False:
-            return False
-        self._clear_content(chapter.id.string, chapter)
-        self._add_content(chapter)
-        return True"""
-        pass
+        def threaded_update(chapter: Chapter):
+            set_thinking_stage(True, message=f"Rehashing {chapter.metadata.title}")
+            self._clear_content(chapter=chapter)
+            cnt = self._add_content(chapter=chapter)
+            set_thinking_stage(
+                False, message=f"update_content {cnt} / {chapter.metadata.title}"
+            )
+            return
+
+        _thread = Thread(target=threaded_update, args=(chapter,))
+        _thread.start()
 
     def update_metadata(self, chapter: Chapter):
         """if self.book.update_chapter(chapter) is False:
@@ -93,7 +105,10 @@ class ChapterRoutine:
         id: String = String(id)
         if id not in self.book.chapters_by_key:
             return Err(f"Failed to find Chapter with ID {id}")
-        self.book.chapters_by_key[id].content = content
+        chapter = self.book.chapters_by_key[id]
+        chapter.content = content
+        self.update_content(chapter)
+        self.save()
         return Ok(True)
 
     def __enter__(self):
@@ -104,7 +119,6 @@ class ChapterRoutine:
 
 
 """
-
     def _add_metadata(self, chapter: Chapter):
         c_tbl = self.database.table(VectorTable.CHAPTER)
         c_tbl.add([chapter.as_specific_attributes()])

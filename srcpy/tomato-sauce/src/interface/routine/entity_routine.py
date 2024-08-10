@@ -26,6 +26,7 @@ class EntityRoutine:
     crud: CRUD
     database: VectorDatabaseInterface
     llm: LargeLangueModelInterface
+    save: Callable
 
     def __init__(
         self,
@@ -34,12 +35,14 @@ class EntityRoutine:
         crud: CRUD,
         database: VectorDatabaseInterface,
         llm: LargeLangueModelInterface,
+        save: Callable,
     ):
         self.book = book
         self.table = table
         self.crud = crud
         self.database = database
         self.llm = llm
+        self.save = save
 
     def get_tag_group(self):
         match self.table:

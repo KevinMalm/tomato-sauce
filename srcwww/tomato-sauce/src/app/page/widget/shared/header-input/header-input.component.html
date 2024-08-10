@@ -1,0 +1,6 @@
+<div *ngIf="this.prefix_icon != null">
+    <img *ngIf="this.annotation == null" [src]="this.prefix_icon">
+    <img *ngIf="this.annotation != null" [src]="this.prefix_icon" [matTooltip]="this.annotation">
+</div>
+
+<input class="input" [placeholder]="this.placeholder" [(ngModel)]="this.value.string">

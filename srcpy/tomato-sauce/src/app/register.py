@@ -14,10 +14,17 @@ def register_callbacks():
         delete_location_route,
         list_locations_route,
     )
-    from .callbacks.chapter import list_chapter_metadata_route
+    from .callbacks.chapter import (
+        list_chapter_metadata_route,
+        delete_chapter_route,
+        get_chapter_content_route,
+        set_chapter_content_route,
+        add_chapter_metadata_route,
+    )
     from .callbacks.chat import llm_chat
     from .callbacks.rag import llm_references
-    from .callbacks.thinking import thinking_check
+    from .callbacks.thinking import socket_connect
+    from .callbacks.book import get_book_metadata_route
 
     info("Done Registering all Callbacks")
     return

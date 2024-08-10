@@ -6,6 +6,13 @@
     height: var(--header-height);
     display: flex;
 
+    .title {
+        margin: auto;
+        width: 100%;
+        flex: 1 1 auto;
+        text-align: center;
+    }
+
     tomato-icon-button {
         margin: auto var(--content-padding);
     }
@@ -14,6 +21,10 @@
 .content {
     display: flex;
     height: calc(100% - var(--header-height));
+
+    .editor-bar {
+        height: var(--home-toolbar-height);
+    }
 }
 
 

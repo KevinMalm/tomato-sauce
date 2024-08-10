@@ -47,9 +47,9 @@ class TomatoInterface:
     def chapter(self):
         return Routines.ChapterRoutine(
             self.project.book,
-            self.project.metadata.path,
             self.database,
             self.llm,
+            self.save,
         )
 
     def character(self):
@@ -64,6 +64,7 @@ class TomatoInterface:
             ),
             self.database,
             self.llm,
+            self.save,
         )
 
     def location(self):
@@ -78,7 +79,11 @@ class TomatoInterface:
             ),
             self.database,
             self.llm,
+            self.save,
         )
+
+    def book(self):
+        return Routines.BookRoutine(self.project.book, self.database, self.save)
 
     def rebuild_prompts(self):
         self.prompters = {}

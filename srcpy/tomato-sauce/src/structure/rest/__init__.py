@@ -5,4 +5,7 @@ from .chapter import (
     ListChapterMetadataResponse,
     ChapterContent,
     DeleteChapterRequestResponse,
+    AddChapterRequest,
 )
+from .thinking import ThinkingState
+from .book import BookResponse

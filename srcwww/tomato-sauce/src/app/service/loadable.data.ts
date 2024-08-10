@@ -8,12 +8,16 @@ export class Loadable<T> {
     data: T | null = null;
     loading: boolean = false;
 
-    get is_loaded() {
-        return this.data != null && this.loading == false;
+    get is_loading() {
+        return this.loading;
     }
 
     get is_errored() {
         return this.data == null && this.loading == false;
+    }
+
+    get is_ok() {
+        return this.data != null && this.loading == false;
     }
 
     with_loading(loading: boolean): Loadable<T> {
@@ -46,14 +50,19 @@ export class Loadable<T> {
         }
     }
 
-    async write(http: HttpClient, builder: (client: HttpClient, obj: T) => Promise<T>) {
+    async write(http: HttpClient, builder: (client: HttpClient, obj: T) => Promise<RestResult>) {
         if (this.data == null) {
             return;
         }
         try {
             this.loading = true;
             this.error = null;
-            this.data = await builder(http, this.data!);
+            let response = await builder(http, this.data!);
+            if (result_is_ok(response)) {
+                this.data = response.body as T
+            } else {
+                this.error = response.body as string
+            }
             this.loading = false;
         } catch (e: Error | any) {
             this.data = null;

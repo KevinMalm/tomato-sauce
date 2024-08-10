@@ -39,7 +39,7 @@ import { AppDrawerComponent } from './page/widget/app-drawer/app-drawer.componen
 export class AppComponent {
   title = 'tomato-sauce';
 
-  sidebar_open: boolean = false;
+  sidebar_open: boolean = true;
 
   trigger_sidebar(me: AppComponent, state: boolean) {
     me.sidebar_open = state;
